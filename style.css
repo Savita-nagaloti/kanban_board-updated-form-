@@ -1,0 +1,32 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', 'Segoe UI', sans-serif; }
+body { background-color: #f4f5f7; color: #172b4d; padding: 20px; }
+.container { max-width: 1200px; margin: auto; }
+header { text-align: center; margin-bottom: 30px; }
+
+.input-section { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+input, select { padding: 10px; border: 2px solid #dfe1e6; border-radius: 5px; outline: none; }
+input:focus { border-color: #4c9aff; }
+#addBtn { padding: 10px 20px; background: #0052cc; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.2s; }
+#addBtn:hover { background: #0065ff; }
+
+.board { display: flex; gap: 20px; align-items: flex-start; overflow-x: auto; padding-bottom: 20px; }
+.column { background: #ebedf0; border-radius: 10px; flex: 1; min-width: 300px; padding: 15px; min-height: 80vh; transition: background 0.3s; }
+.column h3 { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 0.85rem; color: #5e6c84; font-weight: 700; }
+.count { background: #dfe1e6; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; }
+
+/* Drag and Drop Visual Feedback */
+.drag-over { background-color: #d2d6dc !important; border: 2px dashed #4c9aff; }
+
+.task-list { min-height: 200px; height: 100%; }
+.task { background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); cursor: grab; border-left: 4px solid #0052cc; transition: transform 0.1s; }
+.task.dragging { opacity: 0.5; }
+
+.priority-tag { font-size: 0.7rem; font-weight: bold; text-transform: uppercase; margin-bottom: 5px; display: inline-block; padding: 2px 6px; border-radius: 4px; }
+.high { background: #ffebe6; color: #bf2600; }
+.medium { background: #fff0b3; color: #856606; }
+.low { background: #e3fcef; color: #006644; }
+
+.task-actions { display: flex; gap: 10px; margin-top: 10px; justify-content: flex-end; }
+.btn-edit, .btn-del { font-size: 0.75rem; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+.btn-edit { background: #f4f5f7; color: #42526e; }
+.btn-del { background: #ffebe6; color: #de350b; }
